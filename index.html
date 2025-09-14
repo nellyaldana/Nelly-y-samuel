@@ -5,9 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Invitación de Boda — Samuel & Nelly</title>
 
-<!-- Tipos elegantes -->
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+<!-- Carga de la fuente Ballet desde Google Fonts -->
+ <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+  <!-- Importa algunas fuentes de ejemplo de la categoría "Fancy" -->
+  <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baskerville&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gwendolyn&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Yrsa&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ballet&display=swap" rel="stylesheet">
+  
+  
+<!-- Importar fuente Italianno desde Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
 
+  <!-- Puedes agregar más fuentes de Google Fonts si lo deseas -->
+
+  
 <style>
 :root{
   /* Paleta neutra */
@@ -19,19 +37,20 @@
 
   /* Imágenes: cámbialas por las tuyas */
   --hero: url('https://i.pinimg.com/originals/f0/b0/c7/f0b0c7f92a22d4a95e0feb942c378263.jpg');
-  --img1: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop');
+  --img1: url('https://drive.google.com/uc?export=download&id=1HAKZx_1hXSPuxA-veyKlEfoIg4t_HQRb');
   --img2: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop');
-  --img3: url('https://images.unsplash.com/photo-1519741497928-883c3f6a5906?q=80&w=1200&auto=format&fit=crop');
+  --img3: url('https://photos.app.goo.gl/JCRrc8LfM3hVq2uq9');
   --img4: url('https://images.unsplash.com/photo-1519744792095-2f2205e87b6f?q=80&w=1200&auto=format&fit=crop');
   --img5: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200&auto=format&fit=crop');
   --img6: url('https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1200&auto=format&fit=crop');
+  --ornamento: url('https://file.aiquickdraw.com/imgcompressed/img/compressed_9a7ec23d36126cd2ce32b8cd4b12b8da.webp');
 }
 
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
   margin:0;
-  font-family: "Cormorant Garamond", serif;
+   font-family: 'Gwendolyn';
   color:var(--ink);
   background:linear-gradient(#faf9f7, var(--bg));
   line-height:1.45;
@@ -48,55 +67,92 @@ body{
   background:linear-gradient(to bottom, #f7f6f4, #f1efec);
 }
 
-.monogram{
-  position:absolute;
-  top:18px;
-  left:0; right:0;
-  margin:auto;
-  width:max-content;
-  font-family:"Great Vibes", cursive;
-  font-size:48px;
-  letter-spacing:2px;
-  color:var(--ink);
-  opacity:0;
-  animation:fadeIn 900ms ease forwards 300ms;
+.monogram {
+  position: absolute;
+  display: inline-block;
+  top: 8px;
+  left: 0; 
+  right: 0;
+  margin: auto;
+  width: max-content;
+  font-family: Italianno, cursive;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: var(--ink);
+  opacity: 0;
+  text-align: center; /* centra el contenido para las líneas */
+  animation: fadeIn 900ms ease forwards 300ms;
 }
 
-.strips{
-  width:min(980px, 92vw);
-  display:grid;
-  grid-template-columns: 0.9fr 1.3fr 0.9fr; /* centro más ancho como en tu imagen */
-  gap:min(3vw,16px);
-  align-items:stretch;
+/* Líneas decorativas */
+.monogram::before,
+.monogram::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;       /* ajusta el largo de las líneas */
+  height: 1px;      /* grosor de la línea */
+  background-color: var(--ink);  /* mismo color que el texto */
 }
 
-.strip{
-  position:relative;
-  border-radius:10px;
-  overflow:hidden;
-  box-shadow:0 10px 30px rgba(0,0,0,.08);
-  isolation:isolate;
-  height:min(68svh, 640px);
-  transform:translateY(40px);
-  opacity:0;
+.monogram::before {
+  left: -45%;       /* separa la línea a la izquierda del texto */
 }
-.strip::before{
-  content:"";
-  position:absolute; inset:0;
-  background-image:var(--hero);
-  background-size:cover;
-  background-position:center;
-  filter:contrast(1) saturate(1.05);
-  transform:scale(1.1);
+
+.monogram::after {
+  right: -45%;      /* separa la línea a la derecha del texto */
 }
-.strip.s-left::before{ background-position:left; }
-.strip.s-center::before{ background-position:center; }
-.strip.s-right::before{ background-position:right; }
+
+
+.strips {
+  width: min(980px, 85vw);
+  display: grid;
+  grid-template-columns: 0.7fr 0.9fr 0.7fr; /* centro más ancho */
+  gap: min(3vw, 16px);
+  align-items: center; /* centramos verticalmente dentro de la fila */
+}
+
+.strip {
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  isolation: isolate;
+  height: min(68svh, 640px); /* altura base */
+  transform: translateY(40px);
+  opacity: 0;
+}
+
+/* Ajustamos laterales */
+.strip.s-left,
+.strip.s-right {
+  height: calc(min(50svh, 500px)); /* acomodar los extremos de la portada */
+}
+
+/* Esto centra las columnas laterales respecto a la central */
+.strip.s-left,
+.strip.s-right {
+  margin-top: 2px;
+}
+
+.strip::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: var(--hero);
+  background-size: cover;
+  background-position: center;
+  filter: contrast(1) saturate(1.05);
+  transform: scale(1.1);
+}
+
+.strip.s-left::before { background-position: left; }
+.strip.s-center::before { background-position: center; }
+.strip.s-right::before { background-position: right; }
 
 /* Animaciones independientes para cada franja */
-.strip.s-left{ animation:slideInLeft 900ms cubic-bezier(.2,.7,.2,1) forwards 300ms; }
-.strip.s-center{ animation:revealUp 900ms cubic-bezier(.2,.7,.2,1) forwards 520ms; }
-.strip.s-right{ animation:slideInRight 900ms cubic-bezier(.2,.7,.2,1) forwards 740ms; }
+.strip.s-left{ animation:slideInLeft 1000ms cubic-bezier(.2,.7,.2,1) forwards 300ms; }
+.strip.s-center{ animation:revealUp 1200ms cubic-bezier(.2,.1,.2,1) forwards 720ms; }
+.strip.s-right{ animation:slideInRight 900ms cubic-bezier(.2,.7,.2,1) forwards 540ms; }
 
 /* Brillo sutil en loop */
 .strip::after{
@@ -104,7 +160,7 @@ body{
   position:absolute; inset:-20%;
   background: radial-gradient(30% 30% at 20% 10%, rgba(255,255,255,.18), transparent 60%);
   transform: translateX(-40%) rotate(8deg);
-  opacity:.0;
+  opacity:0;
   animation: shimmer 6s ease-in-out infinite 2.4s;
   pointer-events:none;
 }
@@ -118,7 +174,7 @@ body{
   pointer-events:none;
 }
 .hero-names{
-  font-family:"Great Vibes", cursive;
+  font-family: 'Mea Culpa', cursive;
   font-size: clamp(38px, 9vw, 86px);
   font-weight:400;
   letter-spacing:.5px;
@@ -131,82 +187,119 @@ body{
 .hero-date{
   position:absolute; bottom:10px; left:50%; transform:translateX(-50%);
   letter-spacing:.45em;
-  font-size: clamp(14px, 2.8vw, 18px);
-  color:#111; opacity:.0;
+ font-family:'Style Script'; font-size: clamp(14px, 2.8vw, 18px);
+  color: var(--line); opacity:0;
   animation:fadeIn 900ms ease forwards 1.3s;
 }
 
 /* Flecha scroll */
 .scroll-indicator{
-  position:absolute; bottom:12px; left:50%; transform:translateX(-50%);
+  position:absolute; bottom:0px; left:50%; 
   width:26px; height:26px; border-bottom:2px solid #111; border-right:2px solid #111;
   transform: translate(-50%,0) rotate(45deg);
   opacity:.2; animation:bounce 2.6s infinite;
 }
-
-/* ---------- Secciones ---------- */
-.section{
+  
+.ornament-top{
+  width:100%;
+  height:80px; /* altura del adorno */
+ background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiuX-v6wpXDNO9qjj-agJpYMD28odGJtOROtb8soLyiRJUm3qny7FOoQRuF3pteRFAamPlrWFsrmX6XvJbVzeYbRV_-dPLfK6Ck4p7aZhggWp3pILn3MpoUGe0nbDuZjWOfdMe3q7N_MgLN/s320/florales,ornamentos,dorados,png,vintage,clipart+(3).png")
+              no-repeat center;
+  background-size:contain;
+  margin: 0 auto;
+  opacity:0.8;
+  
+}
+ .section{
   padding:84px 22px;
   background:var(--bg);
+   
 }
 .section.alt{ background:var(--bg-2); }
 .container{ width:min(1000px, 94vw); margin:auto; }
+  .secondtext {font-family:'Gwendolyn'; text width:min(1000px, 94vw); margin:auto; }
 
 .h{
   font-weight:600;
-  font-size: clamp(28px, 4.3vw, 40px);
+  font-size: clamp(38px, 4.3vw, 50px);
   text-align:center; margin:0 0 16px;
+  
 }
 .sub{
   text-align:center; color:var(--muted);
+  font-family:'Italianno'; font-size: clamp(18px, 4.3vw, 28px);
   margin:0 auto 36px; max-width:720px;
 }
 
 /* Cuenta regresiva */
 .countdown{
-  display:grid; grid-template-columns:repeat(4, minmax(70px, 1fr));
-  gap:14px; width:min(800px, 96%); margin:22px auto 0;
+  display:grid; grid-template-columns:repeat(4, minmax(60px, 0.8fr));
+  gap:6px; width:min(350px, 80%); margin:8px auto 0;
 }
 .tile{
-  background:#fff; border:1px solid var(--line);
-  border-radius:16px; padding:22px 14px;
-  text-align:center; box-shadow:0 10px 24px rgba(0,0,0,.04);
+  background:#fff; border: hidden 10px whitesmoke;
+  border-radius:100px; padding:1px 1px;
+  text-align:center; box-shadow:10px 10px 10px rgba(0,1,0,0.4);
   transform:translateY(12px); opacity:0;
 }
-.tile .num{ font-size: clamp(28px, 5.5vw, 44px); font-weight:600; }
-.tile .lbl{ color:var(--muted); font-size:14px; letter-spacing:.08em; }
+.tile .num{ font-family: 'Castoro Titling'; font-size: clamp(28px, 4.5vw, 18px); font-weight:300; }
+.tile .lbl{ font-family: 'Castoro Titling'; color:var(--muted); font-size:8px; letter-spacing:.08em; }
 
 /* Detalles */
 .details{
-  display:grid; gap:16px; grid-template-columns:repeat(3,1fr);
+  display:grid; grid-template-columns:repeat(2,minmax(60px, 0.8fr));
+  gap:5px; width:min(700px, 80%); margin:8px auto 0;
+   
 }
 .card{
-  background:#fff; border:1px solid var(--line); border-radius:18px;
-  padding:24px; box-shadow:0 12px 28px rgba(0,0,0,.05);
-  transform:translateY(12px); opacity:0;
+  font-size:20px;
+  width: min(300px, 20vw);
+  background:#fff; border: hidden 15px floralwhite; border-radius:0px;
+  padding:24px; box-shadow:0 20px 28px rgba(0,0,0,.05);
+   
 }
-.card h3{ margin:0 0 8px; font-weight:600; }
+.details .card p:nth-of-type(1) {
+  font-family: "Castoro Titling", serif;  font-size:13px;/* primera línea */
+}
+
+.details .card p:nth-of-type(2) {
+  font-family: "Yrsa", serif; font-size:13px;/* segunda línea */
+}
+  .details .card a:nth-of-type(1) {
+  font-family: "Yrsa", serif; font-size:13px;/* segunda línea */
+}
+  
+  
+.card h3{font-family:'Italianno'; margin:0 0 8px; font-weight:600; }
 .card p{ margin:6px 0; color:#4d4a45; }
 .btn{
   display:inline-block; margin-top:12px; padding:10px 18px;
-  border-radius:999px; border:1px solid #cfc9c2; text-decoration:none; color:#2b2b2b;
+  border-radius:999px; border:1px solid #cfc9c2; text-decoration:none; color:#2b2b2b; 
   background:linear-gradient(#fff, #f6f4f1);
   transition: transform .2s ease, box-shadow .2s ease;
 }
 .btn:hover{ transform:translateY(-2px); box-shadow:0 10px 18px rgba(0,0,0,.06); }
-
+.btn.whatsapp{ font-family: 'Yrsa', cursive; background:#eafff3; border-color:#c1e8d2}
 /* Itinerario */
-.timeline{ border-left:2px solid var(--line); margin:18px auto 0; max-width:680px; padding-left:18px; }
-.step{ position:relative; margin:18px 0; transform:translateY(12px); opacity:0; }
-.step::before{ content:""; position:absolute; left:-10px; top:6px; width:12px; height:12px; background:#fff; border:2px solid #cbbfb2; border-radius:50%; }
+.timeline{ border-left:2px solid var(--line); margin:8px auto 0; max-width:680px; padding-left:18px; }
+.step{ font-family: 'Baskerville'; font-size: 15px; position:relative; margin:18px 0; transform:translateY(20px); opacity:0; }
+.step::before{ content:""; position:absolute; left:-40px; top:6px; width:12px; height:12px; background:#fff; border:2px solid #cbbfb2; border-radius:50%; }
 
 /* Galería */
 .gallery{
   margin-top:12px;
   display:grid; gap:10px; grid-template-columns:repeat(6, 1fr);
+ 
 }
+.photos{
+  font-weight:600;
+  font-size: clamp(38px, 4.3vw, 50px);
+  text-align:center; margin:0 0 16px;
+  font-family: 'Fleur de Leah', cursive;
+  
+  }
 .g{
-  border-radius:14px; padding-top:100%; position:relative; overflow:hidden;
+  border-radius:4px; padding-top:100%; position:relative; overflow:hidden;
   background:#ddd; transform:scale(.98); opacity:0;
 }
 .g::before{
@@ -222,20 +315,10 @@ body{
 .g.i5::before{ background-image:var(--img5); }
 .g.i6::before{ background-image:var(--img6); }
 
-/* RSVP */
-.form{
-  max-width:680px; margin:10px auto 0; display:grid; gap:12px;
-}
-.input, .textarea, .select{
-  width:100%; padding:14px 14px; border-radius:12px;
-  border:1px solid var(--line); background:#fff; font-family:inherit; font-size:16px;
-}
-.textarea{ min-height:110px; resize:vertical; }
-.rsvp-actions{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
 
 /* Footer */
 footer{
-  text-align:center; color:var(--muted);
+  font-family:'Yrsa'; font-size: 10px; text-align:center; color:var(--muted);
   padding:40px 20px 60px;
 }
 
@@ -245,17 +328,18 @@ footer{
 @keyframes slideInLeft{ from{opacity:0; transform:translateX(-40px)} to{opacity:1; transform:none} }
 @keyframes slideInRight{ from{opacity:0; transform:translateX(40px)} to{opacity:1; transform:none} }
 @keyframes revealUp{ from{opacity:0; transform:translateY(40px) scale(.98)} to{opacity:1; transform:none} }
-@keyframes shimmer{ 0%,100%{opacity:.0; transform: translateX(-40%) rotate(8deg)} 50%{opacity:.35; transform: translateX(40%) rotate(8deg)} }
+@keyframes shimmer{ 0%,100%{opacity:0; transform: translateX(-40%) rotate(8deg)} 50%{opacity:.35; transform: translateX(40%) rotate(8deg)} }
 @keyframes bounce{
   0%,100%{ transform: translate(-50%,0) rotate(45deg); }
   50%{ transform: translate(-50%,6px) rotate(45deg); }
 }
-
 /* estado "visible" al scrollear */
 .reveal.in{ animation: fadeUp 800ms ease forwards; }
 .reveal-delay-1.in{ animation-delay: 80ms; }
 .reveal-delay-2.in{ animation-delay: 160ms; }
 .reveal-delay-3.in{ animation-delay: 240ms; }
+.reveal-1.in { animation: slideInLeft 800ms ease forwards; }
+
 
 /* Responsive */
 @media (max-width: 900px){
@@ -271,7 +355,7 @@ footer{
 @media (prefers-reduced-motion: reduce){
   *{ animation:none !important; transition:none !important }
 }
-}
+
 
 /* Aquí pones la regla */
 img {
@@ -283,7 +367,7 @@ img {
 
 <!-- PORTADA: 3 franjas con animaciones independientes -->
 <header class="hero" id="inicio">
-  <div class="monogram">S&nbsp;&&nbsp;&nbsp;N</div>
+  <div class="monogram">Nuestra Boda&nbsp;</div>
 
   <div class="strips" aria-label="Foto portada en tres franjas">
     <div class="strip s-left"></div>
@@ -301,15 +385,15 @@ img {
 
 <!-- CUENTA REGRESIVA -->
 <section class="section alt" id="cuenta">
-  <div class="container">
-    <h2 class="h">¡Falta muy poco!</h2>
-    <p class="sub">Acompáñanos a celebrar nuestro amor el <strong>25 de Octubre de 2025</strong>.</p>
+  <div class="ornament-top"></div>
+    <h2 class="h reveal-1">¡Falta muy poco!</h2>
+    <p class="sub reveal">Acompáñanos a celebrar nuestro amor este <strong>25 de Octubre de 2025</strong>.</p>
 
     <div class="countdown">
-      <div class="tile reveal"><div class="num" id="d">00</div><div class="lbl">días</div></div>
-      <div class="tile reveal reveal-delay-1"><div class="num" id="h">00</div><div class="lbl">horas</div></div>
-      <div class="tile reveal reveal-delay-2"><div class="num" id="m">00</div><div class="lbl">minutos</div></div>
-      <div class="tile reveal reveal-delay-3"><div class="num" id="s">00</div><div class="lbl">segundos</div></div>
+      <div class="tile reveal"><div class="num" id="d">00</div><div class="lbl">Días</div></div>
+      <div class="tile reveal reveal-delay-1"><div class="num" id="h">00</div><div class="lbl">Horas</div></div>
+      <div class="tile reveal reveal-delay-2"><div class="num" id="m">00</div><div class="lbl">Minutos</div></div>
+      <div class="tile reveal reveal-delay-3"><div class="num" id="s">00</div><div class="lbl">Segundos</div></div>
     </div>
   </div>
 </section>
@@ -323,30 +407,24 @@ img {
     <div class="details">
       <article class="card reveal">
         <h3>Ceremonia</h3>
-        <p><strong>17:00</strong> — Parroquia San Benito</p>
-        <p>Av. Central 123, Ciudad</p>
-        <a class="btn" target="_blank" href="https://maps.google.com?q=Parroquia%20San%20Benito">Ver mapa</a>
+        <p><strong>06:00 PM</strong> — Salon las palmas</p>
+        <p>Amanecer, Terrazas de San Bernardo, La Cueva, 22525 Tijuana, B.C., México</p>
+        <a class="btn" target="_blank" href="https://maps.app.goo.gl/FxHejANH9JJGKAsA7">Ver mapa</a>
       </article>
 
-      <article class="card reveal reveal-delay-1">
-        <h3>Recepción</h3>
-        <p><strong>19:00</strong> — Salón Jardín Lunas</p>
-        <p>Cam. del Lago 456, Ciudad</p>
-        <a class="btn" target="_blank" href="https://maps.google.com?q=Salon%20Jardin%20Lunas">Cómo llegar</a>
-      </article>
 
       <article class="card reveal reveal-delay-2">
         <h3>Código de vestimenta</h3>
-        <p>Formal / tonos neutros.</p>
+        <p>Formal </p>
         <p>Evita blanco puro — ¡es para la novia! ✨</p>
       </article>
     </div>
 
     <div class="timeline">
-      <div class="step reveal"><strong>16:30</strong> — Recepción de invitados</div>
-      <div class="step reveal reveal-delay-1"><strong>17:00</strong> — Ceremonia</div>
-      <div class="step reveal reveal-delay-2"><strong>19:00</strong> — Coctel</div>
-      <div class="step reveal reveal-delay-3"><strong>20:00</strong> — Cena & baile</div>
+      <div class="step reveal"><strong>06:00 pm</strong> — Recepción de invitados</div>
+      <div class="step reveal reveal-delay-1"><strong>07:00 pm</strong> — Ceremonia Civil</div>
+      <div class="step reveal reveal-delay-2"><strong>08:00 pm</strong> — Cena</div>
+      <div class="step reveal reveal-delay-3"><strong>08:30 pm</strong> — Baile</div>
     </div>
   </div>
 </section>
@@ -354,8 +432,8 @@ img {
 <!-- GALERÍA -->
 <section class="section alt" id="galeria">
   <div class="container">
-    <h2 class="h">Momentos</h2>
-    <p class="sub">Un vistazo a nuestra historia.</p>
+    <h2 class="photos reveal-1">Momentos</h2>
+    <p class="sub reveal">Un vistazo a nuestra historia.</p>
     <div class="gallery">
       <div class="g i1 reveal"></div>
       <div class="g i2 reveal reveal-delay-1"></div>
@@ -367,37 +445,25 @@ img {
   </div>
 </section>
 
-<!-- RSVP -->
-<section class="section" id="rsvp">
-  <div class="container">
-    <h2 class="h">Confirma tu asistencia</h2>
-    <p class="sub">Nos ayudará a planear con cariño cada detalle.</p>
-
-    <form class="form" id="rsvpForm">
-      <input class="input" type="text" id="nombre" placeholder="Tu nombre" required>
-      <select class="select" id="asistencia" required>
-        <option value="">¿Asistirás?</option>
-        <option>Confirmo asistencia</option>
-        <option>No podré asistir</option>
-      </select>
-      <input class="input" type="number" id="acompanantes" min="0" max="10" placeholder="Número de acompañantes (opcional)">
-      <textarea class="textarea" id="mensaje" placeholder="Mensaje para los novios (opcional)"></textarea>
-
-      <div class="rsvp-actions">
-        <button class="btn" type="submit">Enviar por WhatsApp</button>
-        <span style="color:var(--muted)">Se abrirá WhatsApp con tu confirmación lista.</span>
-      </div>
-    </form>
-  </div>
-</section>
-
+  
+ <section id="confirmar" style="background:linear-gradient(180deg,#fff, #fffaf7)">
+    <div class="container reveal" style="text-align:center">
+      <h2>¿Nos acompañas?</h2>
+      <p class="sub reveal">Confirma tu asistencia antes del <strong>1 de octubre de 2025</strong>.</p>
+      <p>
+        <a class="btn whatsapp" href="https://wa.me/526647629593?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Nelly%20y%20Samuel" target="_blank" rel="noreferrer noopener">Confirmar por WhatsApp</a>
+      </p>
+    </div>
+  </section>
+  
 <footer>
-  Con amor, <strong>Samuel & Nelly</strong> — 25 · 10 · 25
+  Con amor ♡ <strong>Samuel & Nelly</strong> — 25 · 10 · 25
 </footer>
 
 <script>
-/* --------- Apariciones al hacer scroll --------- */
-const revealEls = document.querySelectorAll('.reveal, .tile, .card, .step, .g');
+
+  /* --------- Apariciones al hacer scroll --------- */
+const revealEls = document.querySelectorAll('.photos, .hero-text, .h, .monogram, .reveal, .tile, .card, .step, .g');
 const io = new IntersectionObserver((entries)=> {
   entries.forEach(e=>{
     if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
@@ -424,33 +490,9 @@ function tick(){
 tick(); setInterval(tick, 1000);
 
 /* --------- RSVP por WhatsApp + localStorage --------- */
-const form = document.getElementById('rsvpForm');
-form.addEventListener('submit', (ev)=>{
-  ev.preventDefault();
-  const nombre = document.getElementById('nombre').value.trim();
-  const asistencia = document.getElementById('asistencia').value;
-  const acomp = document.getElementById('acompanantes').value || '0';
-  const mensaje = document.getElementById('mensaje').value.trim();
-
-  const text = `Hola, soy ${nombre}. ${asistencia}. Acompañantes: ${acomp}. ${mensaje?('Mensaje: '+mensaje):''}`.trim();
-  // Guarda localmente
-  localStorage.setItem('rsvp_sn', JSON.stringify({nombre, asistencia, acomp, mensaje}));
-  // Abre WhatsApp (pon aquí tu teléfono si quieres: 6647629593)
-  const wa = `https://wa.me/?text=${encodeURIComponent(text)}`;
-  window.open(wa, '_blank');
-});
-
-// Rellena si ya se había guardado
-const saved = localStorage.getItem('rsvp_sn');
-if(saved){
-  try{
-    const data = JSON.parse(saved);
-    if(data.nombre) document.getElementById('nombre').value = data.nombre;
-    if(data.asistencia) document.getElementById('asistencia').value = data.asistencia;
-    if(data.acomp) document.getElementById('acompanantes').value = data.acomp;
-    if(data.mensaje) document.getElementById('mensaje').value = data.mensaje;
-  }catch(e){}
-}
+  
+ 
 </script>
 </body>
 </html>
+
