@@ -107,7 +107,7 @@ body{
 .strips {
   width: min(980px, 85vw);
   display: grid;
-  grid-template-columns: 0.7fr fr 0.7fr; /* centro más ancho */
+  grid-template-columns: 0.7fr 1fr 0.7fr; /* centro más ancho */
   gap: min(3vw, 16px);
   align-items: center; /* centramos verticalmente dentro de la fila */
 }
@@ -118,7 +118,7 @@ body{
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,.08);
   isolation: isolate;
-  height: min(88svh, 940px); /* altura base */
+  height: min(68svh, 640px); /* altura base */
   transform: translateY(40px);
   opacity: 0;
 }
@@ -126,7 +126,7 @@ body{
 /* Ajustamos laterales */
 .strip.s-left,
 .strip.s-right {
-  height: calc(min(70svh, 700px)); /* acomodar los extremos de la portada */
+  height: calc(min(50svh, 500px)); /* acomodar los extremos de la portada */
 }
 
 /* Esto centra las columnas laterales respecto a la central */
@@ -281,9 +281,9 @@ body{
 .btn:hover{ transform:translateY(-2px); box-shadow:0 10px 18px rgba(0,0,0,.06); }
 .btn.whatsapp{ font-family: 'Yrsa', cursive; background:#eafff3; border-color:#c1e8d2}
 /* Itinerario */
-.timeline{ border-left:2px solid var(--line); margin:8px auto 0; max-width:680px; padding-left:18px; }
+.timeline{ border-left:2px solid var(--line); margin:8px auto 0; max-width:680px; padding-left:30px; }
 .step{ font-family: 'Baskerville'; font-size: 15px; position:relative; margin:18px 0; transform:translateY(20px); opacity:0; }
-.step::before{ content:""; position:absolute; left:-40px; top:6px; width:12px; height:12px; background:#fff; border:2px solid #cbbfb2; border-radius:50%; }
+.step::before{ content:""; position:absolute; left:-20px; top:6px; width:12px; height:12px; background:#fff; border:2px solid #cbbfb2; border-radius:50%; }
 
 /* Galería */
 .gallery{
@@ -504,6 +504,7 @@ tick(); setInterval(tick, 1000);
 </script>
 </body>
 </html>
+
 
 
 
