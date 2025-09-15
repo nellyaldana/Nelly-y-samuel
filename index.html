@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Gwendolyn&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Yrsa&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Ballet&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hi-Melody&display=swap" rel="stylesheet">
  
  
 <!-- Importar fuente Italianno desde Google Fonts -->
@@ -36,7 +37,7 @@
 
   /* Imágenes: cámbialas por las tuyas */
   --hero: url('https://i.pinimg.com/originals/f0/b0/c7/f0b0c7f92a22d4a95e0feb942c378263.jpg');
-  --img1: url(' https://raw.githubusercontent.com/nellyaldana/Nelly-y-samuel/refs/heads/main/img11.jpg');
+  --img1: url('https://raw.githubusercontent.com/nellyaldana/Nelly-y-samuel/refs/heads/main/img11.jpg');
   --img3: url('https://photos.app.goo.gl/JCRrc8LfM3hVq2uq9');
   --img4: url('https://images.unsplash.com/photo-1519744792095-2f2205e87b6f?q=80&w=1200&auto=format&fit=crop');
   --img5: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200&auto=format&fit=crop');
@@ -214,9 +215,10 @@ body{
    
 }
 .section.alt{ background:var(--bg-2); }
-.container{ width:min(1000px, 94vw); margin:auto; }
-  .secondtext {font-family:'Gwendolyn'; text width:min(1000px, 94vw); margin:auto; }
-
+.container{ width:min(900px, 94vw); margin:auto; }
+  .secondtext {font-family:'Gwendolyn'; text width:min(900px, 94vw); margin:auto; }
+.memories{font-family:'Hi Melody'; width:min(900px, 94vw); margin:auto; }
+ 
 .h{
   font-weight:600;
   font-size: clamp(38px, 4.3vw, 50px);
@@ -401,7 +403,7 @@ img {
 
 <!-- DETALLES -->
 <section class="section" id="detalles">
-  <div class="container">
+  <div class="container reveal">
     <h2 class="h">Detalles del evento</h2>
     <p class="sub">Comparte con nosotros este día tan especial. ¡Tu presencia es nuestro mejor regalo!</p>
 
@@ -438,7 +440,7 @@ img {
 
 <!-- GALERÍA -->
 <section class="section alt" id="galeria">
-  <div class="container">
+  <div class="memories">
     <h2 class="photos reveal-1">♡</h2>
     <div class="gallery">
       <div class="g i1 reveal"></div>
@@ -496,6 +498,7 @@ tick(); setInterval(tick, 1000);
 </script>
 </body>
 </html>
+
 
 
 
