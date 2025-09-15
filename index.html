@@ -311,7 +311,7 @@ body{
   transition: transform .6s ease;
 }
 .g:hover::before{ transform:scale(1.06); }
-.g.i1::before{ background-image:var(--img1); }
+.g.i1::before{   content: ""; background-image:var(--img1); }
 .g.i2::before{ background-image:var(--img2); }
 .g.i3::before{ background-image:var(--img3); }
 .g.i4::before{ background-image:var(--img4); }
@@ -498,6 +498,7 @@ tick(); setInterval(tick, 1000);
 </script>
 </body>
 </html>
+
 
 
 
