@@ -318,15 +318,23 @@ body{
   font-family: 'Fleur de Leah', cursive;
   
   }
-.g{
-  border-radius:4px; padding-top:100%; position:relative;
-  background:#ddd; transform:scale(.98); opacity:0;
+.g {
+  border-radius:4px;
+  position:relative;
+  background:#ddd;
+  display:inline-block; /* para que se encoja al contenido */
 }
-.g::before{
-  content:""; position:absolute; inset:0;
-  background-size:cover; background-position:center;
-  transition: transform .6s ease;
+.g::before {
+  content:"";
+  display:block;
+  background-image: var(--img1);
+  background-size:contain;      /* para mostrar imagen entera */
+  background-repeat:no-repeat;
+  background-position:center;
+  width:300px;                  /* ancho fijo */
+  aspect-ratio:auto;            /* altura automática según imagen */
 }
+
 .g:hover::before{ transform:scale(1.06); }
 .g.i1::before {
   content: "";
@@ -466,11 +474,12 @@ img {
 <!-- GALERÍA -->
 <section class="section alt1" id="galeria">
   <div class="memories reveal">♡</div>
-    <div class="gallery">
+      <img src="img1.jpg" alt="">
       <div class="g i1 reveal"></div>
     </div>
   </div>
 </section>
+
 
   
  <section id="confirmar" style="background:linear-gradient(180deg,#fff, #fffaf7)">
@@ -523,6 +532,7 @@ tick(); setInterval(tick, 1000);
 </script>
 </body>
 </html>
+
 
 
 
