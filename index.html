@@ -346,7 +346,7 @@ footer{
 /* Responsive */
 @media (max-width: 900px){
   .details{ grid-template-columns:1fr; }
-  .gallery{ grid-template-columns:repeat(3,1fr); }
+  .gallery{ grid-template-columns:repeat(1,2fr); }
 }
 @media (max-width: 640px){
   .strips{ grid-template-columns: 1fr 1.2fr 1fr; gap:10px; }
@@ -439,8 +439,7 @@ img {
 
 <!-- GALERÍA -->
 <section class="section alt" id="galeria">
-  <div class="memories">
-    <h2 class="photos reveal-1">♡</h2>
+  <div class="memories reveal">♡</div>
     <div class="gallery">
       <div class="g i1 reveal"></div>
     </div>
@@ -497,6 +496,7 @@ tick(); setInterval(tick, 1000);
 </script>
 </body>
 </html>
+
 
 
 
