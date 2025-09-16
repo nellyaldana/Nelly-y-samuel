@@ -321,7 +321,15 @@ body{
   transition: transform .6s ease;
 }
 .g:hover::before{ transform:scale(1.06); }
-.g.i1::before{ background-image:var(--img1); }
+.g.i1::before {
+  content: "";
+  position: absolute;
+  inset: 0;                      /* ocupa todo el contenedor */
+  background-image: var(--img1);
+  background-size: contain;      /* muestra la imagen entera */
+  background-repeat: no-repeat;  /* sin repetir */
+  background-position: center;   /* centrado */
+}
 .g.i2::before{ background-image:var(--img2); }
 .g.i3::before{ background-image:var(--img3); }
 .g.i4::before{ background-image:var(--img4); }
@@ -434,7 +442,8 @@ img {
      
      <article class="card reveal reveal-delay-3">
         <h3> No niños</h3>
-        <p>Nos encantaría que esta celebración la disfrutes tanto como nosotros, por eso hemos decidido que sea solo para adultos</p>
+        <p></p>
+         <p>Nos encantaría que esta celebración la disfrutes tanto como nosotros, por eso hemos decidido que sea solo para adultos</p>
       </article>
     </div>
 
@@ -463,8 +472,8 @@ img {
       <p class="sub reveal">Confirma tu asistencia antes del <strong>1 de octubre de 2025</strong>.</p>
       <p>
         <a class="btn whatsapp" href="https://wa.me/526647629593?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Nelly%20y%20Samuel" target="_blank" rel="noreferrer noopener">Confirmar por WhatsApp</a>
-        <div class="ornament-down"></div>
       </p>
+     <div class="ornament-down"></div>
     </div>
   </section>
   
@@ -507,6 +516,7 @@ tick(); setInterval(tick, 1000);
 </script>
 </body>
 </html>
+
 
 
 
