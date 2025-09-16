@@ -346,7 +346,8 @@ footer{
 /* Responsive */
 @media (max-width: 900px){
   .details{ grid-template-columns:1fr; }
-  .gallery{ grid-template-columns:repeat(1,2fr); }
+  .gallery{ grid-template-columns:repeat(1,minmax(60px, 0.8fr)); 
+  gap:5px; width:min(800px, 95%); margin:8px auto 0;
 }
 @media (max-width: 640px){
   .strips{ grid-template-columns: 1fr 1.2fr 1fr; gap:10px; }
@@ -496,6 +497,7 @@ tick(); setInterval(tick, 1000);
 </script>
 </body>
 </html>
+
 
 
 
